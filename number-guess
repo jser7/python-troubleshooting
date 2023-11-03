@@ -1,0 +1,34 @@
+#python troubleshoot
+
+import random
+def guess():
+    number = False
+    num = input("Please enter your guess: ")
+    while not number:
+        if num.isnumeric():
+            num = int(num)
+            number = True
+        else:
+            num = input("Please input a number.")
+        
+    #Indent required so that the num input is in the function and not outside of it, same with the return num.
+    #Changed code a lot, added a while loop to validate that the input is a number. 
+    #The isnumeric() function checks if the inputted number (still a string) is a number or not, and if so, turns it into an integer with casting.
+    return num
+
+#Used ANSI Escape Codes to underline the text, and \n to create new lines and space between sentences.
+print("\033[4m" + "Welcome to the Number Guessing Game!" + "\033[0m" + "\nYour aim is to guess the number I'm thinking of, which is somewhere from 1-100.\n \nClues will be given after your first guess.\n")
+toggle = True
+secretNumber = random.randint(1,100)
+while toggle:
+    
+    numGuessed=guess()
+    if numGuessed < secretNumber:
+        print("Guess is too low, guess higher!")
+    elif numGuessed > secretNumber:
+        print("Guess is too high, guess lower!")
+    elif numGuessed == secretNumber:
+        print("Guessed Correctly!")
+        break
+
+

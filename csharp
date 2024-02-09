@@ -1,0 +1,66 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("What would you like to do? Press 1 for subtraction, press 2 for addition, press 3 for multiplication, press 4 for division, 5 for squaring.");
+		string decision = Console.ReadLine();
+		if (decision == "1")
+		{
+			Console.WriteLine("Please input your first number.");
+			string firstnum = Console.ReadLine();
+			Console.WriteLine("Please input your second number.");
+			string secondnum = Console.ReadLine();
+			int casted_first_num = Convert.ToInt32(firstnum);
+			int casted_second_num = Convert.ToInt32(secondnum);
+			int result = casted_first_num - casted_second_num;
+			Console.WriteLine($"Result: {casted_first_num} - {casted_second_num} = {result}");
+		}
+		else if (decision == "2")
+		{
+			Console.WriteLine("Please input your first number.");
+			string firstnum = Console.ReadLine();
+			Console.WriteLine("Please input your second number.");
+			string secondnum = Console.ReadLine();
+			int casted_first_num = Convert.ToInt32(firstnum);
+			int casted_second_num = Convert.ToInt32(secondnum);
+			int result = casted_first_num + casted_second_num;
+			Console.WriteLine($"Result: {casted_first_num} + {casted_second_num} = {result}");
+		}
+		else if (decision == "3")
+		{
+			Console.WriteLine("Please input your first number.");
+			string firstnum = Console.ReadLine();
+			Console.WriteLine("Please input your second number.");
+			string secondnum = Console.ReadLine();
+			int casted_first_num = Convert.ToInt32(firstnum);
+			int casted_second_num = Convert.ToInt32(secondnum);
+			int result = casted_first_num * casted_second_num;
+			Console.WriteLine($"Result: {casted_first_num} * {casted_second_num} = {result}");
+		}
+		else if (decision == "4")
+		{
+			Console.WriteLine("Please input your first number.");
+			string firstnum = Console.ReadLine();
+			Console.WriteLine("Please input your second number.");
+			string secondnum = Console.ReadLine();
+			int casted_first_num = Convert.ToInt32(firstnum);
+			int casted_second_num = Convert.ToInt32(secondnum);
+			int result = casted_first_num / casted_second_num;
+			Console.WriteLine($"Result: {casted_first_num} / {casted_second_num} = {result}");
+		}
+		else if (decision == "5")
+		{
+			Console.WriteLine("Please input your first number.");
+			string firstnum = Console.ReadLine();
+			Console.WriteLine("Please input your second number.");
+			string secondnum = Console.ReadLine();
+			int casted_first_num = Convert.ToInt32(firstnum);
+			int casted_second_num = Convert.ToInt32(secondnum);
+			double result = Math.Pow(casted_first_num,casted_second_num);
+			Console.WriteLine($"Result: {casted_first_num} {casted_second_num} = {result}");
+		}
+
+	}
+}
